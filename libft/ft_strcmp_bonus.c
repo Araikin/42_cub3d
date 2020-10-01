@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asultanb <asultanb@student.42.us.org>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/16 16:02:16 by asultanb          #+#    #+#             */
+/*   Updated: 2020/09/16 16:02:19 by asultanb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+**	Function: ft_strcmp_bonus
+**	--------------------
+**	 compares
+**
+**	 s1:	string 1 to compare
+**	 s2:	string 2 to compare
+**
+**	 returns:	integer > 0, = 0, < 0 if 's1' > , = , < than 's2'
+*/
+
+#include "libft.h"
+
+int		ft_strcmp_bonus(const char *s1, const char *s2)
+{
+	int i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
+}
